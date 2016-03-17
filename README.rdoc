@@ -1,0 +1,62 @@
+Install ImageMagick [link text][2]  
+Install [Ruby ][2] 2.3  
+Run bundle
+
+## API ##
+
+Create user
+-------
+
+**Request**
+
+> POST /api/users
+
+**Response**
+
+> OK
+
+Get resized image
+-----------------
+
+**Request**
+> POST /api/images
+
+
+
+*Request data*
+
+{
+  image: {
+    picture: [file],
+    width: [integer]
+    height: [integer]
+  }
+}
+
+**Success response**  
+
+Server will return resized image
+
+
+**Error (invalid request parameters)**  
+*Example:*
+
+{
+  "errors":[
+    {
+      "field":"width",
+      "message":"is not a number"
+    },
+    {
+      "field":"height",
+      "message":"is not a number"
+    },
+    {
+      "field":"picture",
+      "message":"can't be blank"
+    }
+  ]
+}
+
+  [1]: http://www.imagemagick.org/script/index.php
+  [2]: https://www.ruby-lang.org/                
