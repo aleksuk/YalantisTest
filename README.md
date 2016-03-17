@@ -1,4 +1,4 @@
-Install ImageMagick [link text][2]  
+Install [ImageMagick][1]
 Install [Ruby ][2] 2.3  
 Run bundle
 
