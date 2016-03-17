@@ -24,7 +24,7 @@ Get resized image
 
 
 *Request data*
-
+```
 {
   image: {
     picture: [file],
@@ -32,6 +32,7 @@ Get resized image
     height: [integer]
   }
 }
+```
 
 **Success response**  
 
@@ -40,7 +41,7 @@ Server will return resized image
 
 **Error (invalid request parameters)**  
 *Example:*
-
+```
 {
   "errors":[
     {
@@ -57,6 +58,45 @@ Server will return resized image
     }
   ]
 }
+```
+
+Get list of uploaded images
+-------
+
+**Request**
+
+> GET /api/images
+
+**Response**
+*Example:*
+```
+{  
+  "images":[  
+    {  
+      "height":1111,
+      "width":1522,
+      "url":"http://127.0.0.1:3000/api/images/3"
+    },
+    {  
+      "height":811,
+      "width":1111,
+      "url":"http://127.0.0.1:3000/api/images/2"
+    },
+    {  
+      "height":811,
+      "width":1111,
+      "url":"http://127.0.0.1:3000/api/images/1"
+    }
+  ]
+}
+```
+
+Download one of uploaded images
+**Request**
+> GET /api/images/:image_id
+
+**Response**
+Server will return image
 
   [1]: http://www.imagemagick.org/script/index.php
   [2]: https://www.ruby-lang.org/                

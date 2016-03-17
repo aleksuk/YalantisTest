@@ -19,3 +19,4 @@
 !/public/uploads/.keep
 /app/controllers/main_controller.rb
 /app/views/main
+/.idea
